@@ -1,8 +1,16 @@
-<div class="row">
-
-    {{!-- <i class="fas fa-pencil-ruler fa-2x d-inline"></i> --}}
-    <h1 class="myHeading">{{ title }}</h1>
+<div class="col-lg">
+    <h1 class="display-3 text-center">{{title}}</h1>
+    <hr>
 </div>
+
+{{!-- <img class="myIcon" src="/images/technology_icons/mongo_icon.png" data-toggle="tooltip" data-placement="top"
+    title="Mongo DB">
+<img class="myIcon" src="/images/technology_icons/bootstrap_icon.svg" data-toggle="tooltip" data-placement="top" title="Bootstrap 4">
+<img class="myIcon" src="/images/technology_icons/visual_studio_code_icon.svg" data-toggle="tooltip" data-placement="top"
+    title="VS Code"> --}}
+{{!-- <i class="fab fa-js-square fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Javascript"></i>
+--}}
+{{!-- <i class="fab fa-linux fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Linux"></i> --}}
 
 {{!-- Lab and Internal Database --}}
 <div style="margin-bottom: 10px" class="row">
@@ -14,14 +22,26 @@
 
                 <p>Website used to monitor various environmental chambers at Appareo.</p>
 
-                <i class="fab fa-node-js fa-2x d-inline float-right myIcon"></i>
-                <i class="fab fa-js-square fa-2x d-inline float-right myIcon"></i>
-                <i class="fab fa-html5 fa-2x d-inline float-right myIcon"></i>
-                <i class="fab fa-css3 fa-2x d-inline float-right myIcon"></i>
-                <i class="fab fa-linux fa-2x d-inline float-right myIcon"></i>
-                <i class="fab fa-git-square fa-2x d-inline float-right myIcon"></i>
+                <a href="/projects/lab_monitor" class="btn btn-primary">View Details</a>
 
-                <a href="#" class="btn btn-primary">View Details</a>
+                {{!-- Icons --}}
+                <hr>
+                <div class="icon-align-center align-bottom">
+                    <i class="fab fa-node-js fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Nodejs"></i>
+                    <i class="fab fa-html5 fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="HTML 5"></i>
+                    <i class="fab fa-css3 fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="CSS 3"></i>
+                    <i class="fab fa-git-square fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Git"></i>
+                    <img class="myIcon myIcon-img" src="/images/technology_icons/boostrap_icon.png" data-toggle="tooltip"
+                        data-placement="top" title="Bootstrap 4">
+                    <img class="myIcon myIcon-img" src="/images/technology_icons/handlebars_icon.png" data-toggle="tooltip"
+                        data-placement="top" title="Handlebars">
+                    <img class="myIcon myIcon-img" src="/images/technology_icons/mongodb-icon.png" data-toggle="tooltip"
+                        data-placement="top" title="Mongo DB">
+                    <img class="myIcon myIcon-img" src="/images/technology_icons/nginx_icon.png" data-toggle="tooltip"
+                        data-placement="top" title="NGINX">
+                </div>
+
+                <br>
             </div>
         </div>
     </div>
@@ -30,9 +50,23 @@
             <img class="card-img-top" src="../images/internal_database/internal_database_tool_card_image.PNG">
             <div class="card-body">
                 <h5 class="card-title d-inline">Internal Database Tool</h5>
-                <i class="fab fa-git-square d-inline pull-right"></i>
-                <p>Application used to send files to a sever while also logging data about the files. Built for Appareo.</p>
+                <p>Application used to send files to a sever while also logging data about the files. Built for
+                    Appareo.</p>
                 <a href="#" class="btn btn-primary">View Details</a>
+
+                {{!-- Icons --}}
+                <hr>
+                <div class="icon-align-center align-baseline">
+                    <i class="fab fa-git-square fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Git"></i>
+                    <img class="myIcon myIcon-img" src="/images/technology_icons/mysql_icon.png" data-toggle="tooltip"
+                        data-placement="top" title="mySQL">
+                    <img class="myIcon myIcon-img" src="/images/technology_icons/visual_studio_icon.png" data-toggle="tooltip"
+                        data-placement="top" title="Visual Studio 2017">
+                    <img class="myIcon myIcon-img" src="/images/technology_icons/c-sharp-icon.png" data-toggle="tooltip"
+                        data-placement="top" title="C#">
+                    <img class="myIcon myIcon-img" src="/images/technology_icons/mahapps_icon.png" data-toggle="tooltip"
+                        data-placement="top" title="Mahapps">
+                </div>
             </div>
         </div>
     </div>
@@ -83,7 +117,8 @@
             <div class="card-body">
                 <h5 class="card-title d-inline">Endangered Species Map</h5>
                 <i class="fab fa-git-square d-inline pull-right"></i>
-                <p>Python script that pulls data from worldwildlife.org and creates an interactive Google Earth map.
+                <p>Python script that pulls data from worldwildlife.org and creates an interactive Google Earth
+                    map.
                 </p>
                 <a href="#" class="btn btn-primary">View Details</a>
             </div>
@@ -110,7 +145,8 @@
             <div class="card-body">
                 <h5 class="card-title d-inline">Computer Controlled RC Car</h5>
                 <i class="fab fa-git-square d-inline pull-right"></i>
-                <p>Application that used an arduino hacked into an RC remote to allow communication with a Mac running Unity
+                <p>Application that used an arduino hacked into an RC remote to allow communication with a Mac
+                    running Unity
                     3D.
                 </p>
                 <a href="#" class="btn btn-primary">View Details</a>

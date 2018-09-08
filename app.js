@@ -7,16 +7,18 @@ var debug = require('debug')('worker:app');
 var app = express();  //use express js module
 var routes = require('./routes');
 
+//Partials
+// hbs.('heading', '{{heading}}')
+
 // view engine setup
 app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts/'}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 app.use('/', routes);
-
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/public/', express.static(path.join(__dirname, 'public')));
-// app.use('bootstrap', './node_modules/bootstrap/');
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
