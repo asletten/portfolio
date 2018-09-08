@@ -5,7 +5,7 @@ var path = require('path');
 var debug = require('debug')('worker:app');
 
 var app = express();  //use express js module
-var routes = require('./routes/index');
+var routes = require('./routes');
 
 //view engine setup
 app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts/'}));
