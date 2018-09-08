@@ -1,39 +1,179 @@
 <div class="col-lg">
-    <h1 class="display-4">{{title}}</h1>
+    <h1 class="display-4 myHeading">{{title}}</h1>
     <hr>
 </div>
 
-<h3>Summary</h3>
+<h1>Summary</h1>
 <p>
-    The lab monitor tool is a website for monitoring envirnomental chambers at Appareo. The website was built
-    using nodejs, express and nginx for deployment.
+    The lab monitor website is a tool for monitoring environmental chambers at Appareo. With this tool the user can
+    view real time data, “snapshot” data, machine logs, and machine profiles. Each page of the application is separated
+    into two main parts. The first part is the graph which displays the appropriate data and comes equip with a context
+    menu to perform data manipulation.
 </p>
 
-<h3>Details</h3>
-
-Project requirements
-<ul>
-    <li>View all chamber real time data</li>
-    <li>Log all chamber data</li>
-    <li>View all chamber logs</li>
-    <li>Retrive all chamber profiles</li>
-    <li>View all chamber profiles</li>
-    <li>Save images of data graphs</li>
-    <li>View lab temperature and humidity</li>
-</ul>
-
-<h5>Profiles</h5>
-<p>Profiles are sets of set points and thresholds distributed over time. The profiles are 
-    meant to be used to cycle hardware products through different environmental conditions.</p>
-<p>Profiles are stored differently depending on the machine's manufacture, protocol or function. Because of 
-    this the machines were modeled in code as a hiearchy of classes inheriting from one another. The base class 
-    was the "Device" class that had three descendants; "GPIBDevice", "ModbusDevice", "WebDevice".
+<p>The second part is the navigation and details view. The navigation will allow other logs or profiles to be selected.
+    The details view will give the user information pertaining to the set of data that is being viewed.
 </p>
-
-
 
 <div class="row">
-    <div class="col-lg">
-        <img src="/images/lab_monitor/logs.PNG" class="img-responsive img-fluid">
+    <div class="col-sm">
+        <figure class="figure">
+            <img src="/images/lab_monitor/profiles_details_view.PNG" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Details view</figcaption>
+        </figure>
+    </div>
+    <div class="col-sm">
+        <figure class="figure">
+            <img src="/images/lab_monitor/profiles_graph_view.PNG" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Graph view</figcaption>
+        </figure>
+    </div>
+</div>
+
+<br><br>
+<h1>Details</h1>
+<hr>
+
+<h3>Project Requirements</h3>
+<table class="table table-sm">
+    <tbody>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen" </th> <th>View all real time machine data</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen" </th> <th>Log all machine data</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen" </th> <th>View all machine logs</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen" </th> <th>Download all machine logs</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen" </th> <th>Retrieve all machine profiles</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen" </th> <th>View all machine profiles</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen" </th> <th>Save images of data graphs</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen" </th> <th>View lab temperature and humidity</th>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<h3>Backend Implementation</h3>
+<p>The monitor tool is implemented using a combination of nodejs and mongoDB at its core. The application is deployed
+    using express and nginx on a linux server.</p>
+
+<div class="icon-align-center align-bottom">
+    <i class="fab fa-node-js fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Nodejs"></i>
+    <i class="fab fa-linux fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Linux"></i>
+    <img class="myIcon myIcon-img" src="/images/technology_icons/mongodb-icon.png" data-toggle="tooltip" data-placement="top"
+        title="Mongo DB">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/nginx_icon.png" data-toggle="tooltip" data-placement="top"
+        title="NGINX">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/handlebars_icon.png" data-toggle="tooltip"
+        data-placement="top" title="Handlebars">
+</div>
+
+<br><br>
+<h3>Frontend Implementation</h3>
+<p>
+    The client side of the application is written in javascript and uses bootstrap 3 and chart.js for the main viewing
+    experience. Other notable libraries for data parsing and manipulation include moment.js and jQuery.
+</p>
+<div class="icon-align-center align-bottom">
+    <i class="fab fa-js-square fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Javascript"></i>
+    <i class="fab fa-html5 fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="HTML 5"></i>
+    <i class="fab fa-css3 fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="CSS 3"></i>
+    <img class="myIcon myIcon-img" src="/images/technology_icons/moment_icon.png" data-toggle="tooltip" data-placement="top"
+        title="Moment JS">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/boostrap_icon.png" data-toggle="tooltip"
+        data-placement="top" title="Bootstrap 4">
+</div>
+
+
+<br><br>
+<h3>Profiles</h3>
+<p>Profiles are ordered arrays of set-points and thresholds distributed over time. The profiles are meant to be used to
+    cycle hardware products through different environmental conditions.
+    Profiles are stored differently on the machine depending on the machine's manufacture, function or communication
+    protocol. Because of the variety of profile implementations the machines were modeled in code as a hierarchy of
+    classes inheriting from one another. The base class was the "Device" class. The Device class had three descendants
+    based on communication protocols; "GPIBDevice", "ModbusDevice", “WebDevice". Each one of the device subclasses has
+    individual machines or in some cases a machine type if the class can accommodate multiple devices.
+</p>
+
+<div class="row">
+    <div class="col-sm">
+        <figure class="figure">
+            <img src="/images/lab_monitor/profile_no_loops.png" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Profile without loops enabled</figcaption>
+        </figure>
+    </div>
+    <div class="col-sm">
+        <figure class="figure">
+            <img src="/images/lab_monitor/profile_with_loops.png" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Profile with loops enabled</figcaption>
+        </figure>
+    </div>
+</div>
+
+<br>
+<h3>Real Time Data</h3>
+<p>Real time data acquisition takes advantage of the device classes talked about in the profiles section. On server
+    startup, each base device connects to its designated machines using a (nodejs) net TCP socket. Then, at the next
+    level of inheritance (having to do with communication protocols), a basic data acquisition method is implemented.
+    After the basic query method is implemented the subclasses can inherit or override if needed.
+</p>
+
+<div class="row">
+    <div class="col-sm">
+        <figure class="figure">
+            <img src="/images/lab_monitor/snapshot_page.PNG" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Snapshot page</figcaption>
+        </figure>
+    </div>
+    <div class="col-sm">
+        <figure class="figure">
+            <img src="/images/lab_monitor/snapshot_view_temp_hum_logger.png" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Lab (Tempurate, Humidity and Dew point) snapshot graph</figcaption>
+        </figure>
+    </div>
+</div>
+
+<br>
+<h3>Logs</h3>
+
+<p>There are two different set of logs utilized in the application. The first are the “snapshot logs.” The datapoints
+    for
+    these logs are collected every 10 seconds and stored in a noSQL database.
+    note: noSQL was chosen because of the vast number of datapoints that was originally going to be used. Potential for
+    hundreds of millions of points. Another reason is flexibility. There is potential that the datapoint from the
+    machines
+    could change if a user wants another stat added.
+    The database is then set up to purge any data that was added over 24 hours ago.
+    The next set of logs are captured when a profile is “running” on a machine. These logs are stored in a csv file
+    format
+    on a networked drive. When a user wants to access a log the csv is parsed then sent the the client as JSON objects.
+    note: the csv can be downloaded directly from the tool as well
+</p>
+
+<div class="row">
+    <div class="col-sm">
+        <figure class="figure">
+            <img src="/images/lab_monitor/log_data_view.png" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Application graph view of logged data</figcaption>
+        </figure>
+    </div>
+    <div class="col-sm">
+        <figure class="figure">
+            <img src="/images/lab_monitor/log_machine_view.jpg" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Machine graph view of logged data</figcaption>
+        </figure>
     </div>
 </div>
