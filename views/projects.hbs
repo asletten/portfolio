@@ -11,8 +11,10 @@
 {{!-- <i class="fab fa-js-square fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Javascript"></i>
 --}}
 {{!-- <i class="fab fa-linux fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Linux"></i> --}}
+{{!-- <i class="fab fa-git-square fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Git"></i> --}}
 
-{{!-- Lab and Internal Database --}}
+
+{{!-- Lab and Strawberries  --}}
 <div style="margin-bottom: 10px" class="row">
     <div class="col-md">
         <div class="card">
@@ -30,7 +32,6 @@
                     <i class="fab fa-node-js fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Nodejs"></i>
                     <i class="fab fa-html5 fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="HTML 5"></i>
                     <i class="fab fa-css3 fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="CSS 3"></i>
-                    <i class="fab fa-git-square fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Git"></i>
                     <img class="myIcon myIcon-img" src="/images/technology_icons/boostrap_icon.png" data-toggle="tooltip"
                         data-placement="top" title="Bootstrap 4">
                     <img class="myIcon myIcon-img" src="/images/technology_icons/handlebars_icon.png" data-toggle="tooltip"
@@ -47,6 +48,37 @@
     </div>
     <div class="col-md">
         <div class="card">
+            <img class="card-img-top" src="/images/strawberry_robot/stawberry_card_image.jpg">
+            <div class="card-body">
+                <h5 class="card-title d-inline">Strawberry Imaging Robot</h5>
+
+                <p>Arduino and IOS app robot used to take thousands of images of strawberries.</p>
+                <a href="/projects/strawberry_robot" class="btn btn-primary">View Details</a>
+
+                <hr>
+                <div class="icon-align-center align-bottom">
+                    <i class="fab fa-bluetooth-b fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Bluetooth LE"></i>
+                    <img class="myIcon myIcon-img" src="/images/technology_icons/arduino_icon.png" data-toggle="tooltip"
+                        data-placement="top" title="Arduino">
+                    <img class="myIcon myIcon-img" src="/images/technology_icons/av_foundation_icon.png" data-toggle="tooltip"
+                        data-placement="top" title="AVFoundation">
+                    <img class="myIcon myIcon-img" src="/images/technology_icons/ios_11_icon.png" data-toggle="tooltip"
+                        data-placement="top" title="IOS 11">
+                    <img class=" myIcon myIcon-img" src="/images/technology_icons/swift_icon.png" data-toggle="tooltip"
+                        data-placement="top" title="Swift 4.2">
+                    <img class="myIcon myIcon-img" src="/images/technology_icons/ObjC_icon.png" data-toggle="tooltip"
+                        data-placement="top" title="Objective C">
+                    <img class="myIcon myIcon-img" src="/images/technology_icons/c_icon.png" data-toggle="tooltip"
+                        data-placement="top" title="C">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- Internal Database and quadcopter --}}
+<div class="row">
+    <div class="col-md">
+        <div class="card">
             <img class="card-img-top" src="../images/internal_database/internal_database_tool_card_image.PNG">
             <div class="card-body">
                 <h5 class="card-title d-inline">Internal Database Tool</h5>
@@ -57,7 +89,6 @@
                 {{!-- Icons --}}
                 <hr>
                 <div class="icon-align-center align-baseline">
-                    <i class="fab fa-git-square fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Git"></i>
                     <img class="myIcon myIcon-img" src="/images/technology_icons/mysql_icon.png" data-toggle="tooltip"
                         data-placement="top" title="mySQL">
                     <img class="myIcon myIcon-img" src="/images/technology_icons/visual_studio_icon.png" data-toggle="tooltip"
@@ -70,29 +101,15 @@
             </div>
         </div>
     </div>
-</div>
-{{!-- Strawberries and quadcopter --}}
-<div class="row">
-    <div class="col-md">
-        <div class="card">
-            <img class="card-img-top" src="/images/strawberry_robot/stawberry_card_image.jpg">
-            <div class="card-body">
-                <h5 class="card-title d-inline">Strawberry Imaging Robot</h5>
-                <i class="fab fa-git-square d-inline pull-right"></i>
-                <p>Robot used to take thousands of images of strawberries.</p>
-                <a href="/projects/strawberry_robot" class="btn btn-primary">View Details</a>
-            </div>
-        </div>
-    </div>
     <div class="col-md">
         <div class="card">
             <img class="card-img-top" src="/images/quadcopter/quadcopter_card_image.png">
             <div class="card-body">
                 <h5 class="card-title d-inline">Quadcopter Positioning</h5>
-                <i class="fab fa-git-square d-inline pull-right"></i>
+
                 <p>Quadcopter that can figure out its position relative to floor and walls useing minimal sensors.
                 </p>
-                <a href="#" class="btn btn-primary">View Details</a>
+                <a href="#" class="btn btn-primary disabled">View Details</a>
             </div>
         </div>
     </div>
@@ -105,9 +122,9 @@
             <img class="card-img-top" src="../images/test.jpg">
             <div class="card-body">
                 <h5 class="card-title d-inline">Centroid Calculator</h5>
-                <i class="fab fa-git-square d-inline pull-right"></i>
+
                 <p>Program that used Google Earth KML files to calculate the centroid of a US State</p>
-                <a href="#" class="btn btn-primary">View Details</a>
+                <a href="#" class="btn btn-primary disabled">View Details</a>
             </div>
         </div>
     </div>
@@ -116,11 +133,11 @@
             <img class="card-img-top" src="../images/test.jpg">
             <div class="card-body">
                 <h5 class="card-title d-inline">Endangered Species Map</h5>
-                <i class="fab fa-git-square d-inline pull-right"></i>
+
                 <p>Python script that pulls data from worldwildlife.org and creates an interactive Google Earth
                     map.
                 </p>
-                <a href="#" class="btn btn-primary">View Details</a>
+                <a href="#" class="btn btn-primary disabled">View Details</a>
             </div>
         </div>
     </div>
@@ -133,9 +150,9 @@
             <img class="card-img-top" src="../images/test.jpg">
             <div class="card-body">
                 <h5 class="card-title d-inline">PHP Database Website</h5>
-                <i class="fab fa-git-square d-inline pull-right"></i>
+
                 <p>Database project that allows viewing of a SQL database</p>
-                <a href="#" class="btn btn-primary">View Details</a>
+                <a href="#" class="btn btn-primary disabled">View Details</a>
             </div>
         </div>
     </div>
@@ -144,12 +161,12 @@
             <img class="card-img-top" src="../images/test.jpg">
             <div class="card-body">
                 <h5 class="card-title d-inline">Computer Controlled RC Car</h5>
-                <i class="fab fa-git-square d-inline pull-right"></i>
+
                 <p>Application that used an arduino hacked into an RC remote to allow communication with a Mac
                     running Unity
                     3D.
                 </p>
-                <a href="#" class="btn btn-primary">View Details</a>
+                <a href="#" class="btn btn-primary disabled">View Details</a>
             </div>
         </div>
     </div>
@@ -162,9 +179,9 @@
             <img class="card-img-top" src="../images/test.jpg">
             <div class="card-body">
                 <h5 class="card-title d-inline">Geology Game</h5>
-                <i class="fab fa-git-square d-inline pull-right"></i>
+
                 <p>Platformer game to help teach geology.</p>
-                <a href="#" class="btn btn-primary">View Details</a>
+                <a href="#" class="btn btn-primary disabled">View Details</a>
             </div>
         </div>
     </div>
@@ -173,10 +190,10 @@
             <img class="card-img-top" src="../images/test.jpg">
             <div class="card-body">
                 <h5 class="card-title d-inline">Tank Game</h5>
-                <i class="fab fa-git-square d-inline pull-right"></i>
+
                 <p>An interesting take on a "brick breaker" style game.
                 </p>
-                <a href="#" class="btn btn-primary">View Details</a>
+                <a href="#" class="btn btn-primary disabled">View Details</a>
             </div>
         </div>
     </div>
@@ -189,9 +206,9 @@
             <img class="card-img-top" src="../images/test.jpg">
             <div class="card-body">
                 <h5 class="card-title d-inline">My First IOS Game - (Don't laugh)</h5>
-                <i class="fab fa-git-square d-inline pull-right"></i>
+
                 <p>First IOS game build with sprite kit and Swift 1.0</p>
-                <a href="#" class="btn btn-primary">View Details</a>
+                <a href="#" class="btn btn-primary disabled">View Details</a>
             </div>
         </div>
     </div>

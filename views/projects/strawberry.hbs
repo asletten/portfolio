@@ -4,9 +4,24 @@
 </div>
 
 <h1>Summary</h1>
-<p>The strawberry imaging robot is used to take pictures of strawberries for use in training a neural network. The
-    robot consists of a stepper motor, an arduino, a bluetooth module and an iPhone. The stepper motor turns the
-    strawberries while the iPhone takes pictures of the strawberries automatically.</p>
+<p>The strawberry imaging robot is used to take pictures of strawberries for use in training a neural network. The robot consists of a stepper motor, an arduino, a bluetooth module, and an iPhone. The stepper motor turns the strawberries while the iPhone takes pictures of the strawberries automatically.</p>
+
+<div class="icon-align-center align-bottom">
+    <i class="fab fa-bluetooth-b fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Bluetooth LE"></i>
+    <img class="myIcon myIcon-img" src="/images/technology_icons/arduino_icon.png" data-toggle="tooltip" data-placement="top"
+        title="Arduino">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/av_foundation_icon.png" data-toggle="tooltip"
+        data-placement="top" title="AVFoundation">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/ios_11_icon.png" data-toggle="tooltip" data-placement="top"
+        title="IOS 11">
+    <img class=" myIcon myIcon-img" src="/images/technology_icons/swift_icon.png" data-toggle="tooltip" data-placement="top"
+        title="Swift 4.2">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/ObjC_icon.png" data-toggle="tooltip" data-placement="top"
+        title="Objective C">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/c_icon.png" data-toggle="tooltip" data-placement="top"
+        title="C">
+</div>
+
 
 <h1>Details</h1>
 <hr>
@@ -38,10 +53,22 @@
 </table>
 
 <h3>Arduino</h3>
-<p>The arduino in this project is the interface between the bluetooth module and the stepper motor. The code on the
-    arduino waits for the “start” signal from the bluetooth module and then turns the stepper motor one quarter turn.
-    The arduino then sends a “take” message back to the bluetooth module. The arduino will wait for a delay time and
-    repeat the process.</p>
+<p>The arduino in this project is the interface between the bluetooth module and the stepper motor. The code on the arduino waits for the “start” signal from the bluetooth module to begin. Then the arduino rotates the stepper motor one quarter turn. After the rotation is completed the arduino sends a “take” message back to the bluetooth module. The arduino then waits for a delay time and repeats the process.</p>
+
+<div class="row">
+    <div class="col-sm-12 col-md-6">
+        <figure class="figure">
+            <img src="/images/strawberry_robot/stepper_motor.png" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Stepper motor</figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <figure class="figure">
+            <img src="/images/strawberry_robot/arduino.png" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Arduino</figcaption>
+        </figure>
+    </div>
+</div>
 
 <pre><code>
 <code class="access-modifier">void</code> <code class="method">loop</code>() {
@@ -64,7 +91,64 @@
 </code></pre>
 
 <h3>iPhone</h3>
-<p>The iPhone in this project is used to take pictures and start the rotation routine on the arduino. The application
-    running on the phone is written in Swift and uses Core Bluetooth and AVFoundation. Core Bluetooth is used to
-    communicate with the bluetooth module connected to the arduino. When the bluetooth module sends a “take” command
-    the application uses AVFoundation to take a picture and save it to the iPhones photos.</p>
+<p>The iPhone in this project is used to take pictures and start the rotation routine on the arduino. The application running on the phone is written in Swift and uses Core Bluetooth and AVFoundation. Core Bluetooth is used to communicate with the bluetooth module connected to the arduino. When the bluetooth module sends a “take” command, the application uses AVFoundation to take a picture and save it to the iPhone’s photos.</p>
+
+<br>
+<div class="row">
+    <div class="col-lg">
+        <img src="/images/strawberry_robot/strawberry_iphone_app.png" class="img-fluid mx-auto d-block" style="width:40%">
+        {{!-- <figure class="figure">
+            <figcaption class="figure-caption">Stepper motor</figcaption>
+        </figure> --}}
+    </div>
+</div>
+<br>
+
+<h3>Samples</h3>
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <figure class="figure">
+            <img src="/images/strawberry_robot/stawberries/strawberry_1.JPG" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <figure class="figure">
+            <img src="/images/strawberry_robot/stawberries/strawberry_2.JPG" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <figure class="figure">
+            <img src="/images/strawberry_robot/stawberries/strawberry_3.JPG" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <figure class="figure">
+            <img src="/images/strawberry_robot/stawberries/strawberry_4.JPG" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <figure class="figure">
+            <img src="/images/strawberry_robot/stawberries/strawberry_5.JPG" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <figure class="figure">
+            <img src="/images/strawberry_robot/stawberries/strawberry_6.JPG" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <figure class="figure">
+            <img src="/images/strawberry_robot/stawberries/strawberry_7.JPG" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <figure class="figure">
+            <img src="/images/strawberry_robot/stawberries/strawberry_8.JPG" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <figure class="figure">
+            <img src="/images/strawberry_robot/stawberries/strawberry_9.JPG" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+</div>
