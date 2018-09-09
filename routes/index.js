@@ -21,7 +21,12 @@ router.get('/projects', function(req, res, next) {
 
 //Lab monitor
 router.get('/projects/lab_monitor', function(req, res, next) {
-  res.render('project_folder/lab_monitor', { title: 'Lab Monitor Website'});
+  res.render('projects/lab_monitor', { title: 'Lab Monitor Website'});
+});
+
+//Lab monitor
+router.get('/projects/strawberry_robot', function(req, res, next) {
+  res.render('projects/strawberry', { title: 'Strawberry Imaging Robot'});
 });
 
 

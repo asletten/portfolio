@@ -25,3 +25,36 @@
 .myHeading{
     text-align: center;
 }
+
+/* Code */
+.comment{
+    color: green;
+}
+
+.access-modifier{
+    color: darkblue;
+}
+
+.method{
+    color: darkmagenta;
+}
+
+.object{
+    color: purple;
+}
+
+.key-word{
+    color: royalblue;
+}
+
+.variable{
+    color: purple;
+}
+
+.number{
+    color: orange;
+}
+
+.string{
+    color: red;
+}

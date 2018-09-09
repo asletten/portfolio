@@ -1,0 +1,70 @@
+<div class="col-lg">
+    <h1 class="display-4 myHeading">{{title}}</h1>
+    <hr>
+</div>
+
+<h1>Summary</h1>
+<p>The strawberry imaging robot is used to take pictures of strawberries for use in training a neural network. The
+    robot consists of a stepper motor, an arduino, a bluetooth module and an iPhone. The stepper motor turns the
+    strawberries while the iPhone takes pictures of the strawberries automatically.</p>
+
+<h1>Details</h1>
+<hr>
+
+<h3>Project Requirements</h3>
+<table class="table table-sm">
+    <tbody>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i></th>
+            <th>Take pictures of 4 sides of a strawberry</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i></th>
+            <th>Images are well lit</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i></th>
+            <th>Images have adequate contrast</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i></th>
+            <th>Images have specified aspect ratio</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i></th>
+            <th>Images have specified resolution</th>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Arduino</h3>
+<p>The arduino in this project is the interface between the bluetooth module and the stepper motor. The code on the
+    arduino waits for the “start” signal from the bluetooth module and then turns the stepper motor one quarter turn.
+    The arduino then sends a “take” message back to the bluetooth module. The arduino will wait for a delay time and
+    repeat the process.</p>
+
+<pre><code>
+<code class="access-modifier">void</code> <code class="method">loop</code>() {
+  <code class="key-word">if</code>(bluetoothSerial.<code class="method">available</code>()){
+    <code class="comment">// read message from bluetooth module</code>
+    <code class="object">String</code> message = bluetoothSerial.<code class="method">readString</code>();
+    <code class="comment">// check for start</code>
+    <code class="key-word">if</code>(message.<code class="method">equals</code>(<code class="string">"start"</code>)){
+      <code class="key-word">for</code>(<code class="variable">int</code> i = <code class="number">0</code>; i < numberOfPictures- <code class="number">1</code>; i++){
+        <code class="comment">// rotate stepper</code>
+        myStepper.<code class="method">step</code>(stepLength);
+        <code class="comment">// send take message</code>
+        bluetoothSerial.<code class="method">println</code>(<code class="string">"take"</code>);
+        <code class="comment">// wait for delayTime</code>
+        <code class="key-word">delay</code>(delayTime);
+      }
+    }
+  }
+}
+</code></pre>
+
+<h3>iPhone</h3>
+<p>The iPhone in this project is used to take pictures and start the rotation routine on the arduino. The application
+    running on the phone is written in Swift and uses Core Bluetooth and AVFoundation. Core Bluetooth is used to
+    communicate with the bluetooth module connected to the arduino. When the bluetooth module sends a “take” command
+    the application uses AVFoundation to take a picture and save it to the iPhones photos.</p>
