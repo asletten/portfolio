@@ -14,6 +14,10 @@ router.get('/interests', function(req, res, next) {
   res.render('interests', { title: 'Interests'});
 });
 
+router.get('/contact', function(req, res, next) {
+  res.render('contact', { title: 'Contact'});
+});
+
 //Projects
 router.get('/projects', function(req, res, next) {
   res.render('projects', { title: 'Projects'});

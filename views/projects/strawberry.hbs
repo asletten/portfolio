@@ -77,7 +77,7 @@
     <code class="object">String</code> message = bluetoothSerial.<code class="method">readString</code>();
     <code class="comment">// check for start</code>
     <code class="key-word">if</code>(message.<code class="method">equals</code>(<code class="string">"start"</code>)){
-      <code class="key-word">for</code>(<code class="variable">int</code> i = <code class="number">0</code>; i < numberOfPictures- <code class="number">1</code>; i++){
+      <code class="key-word">for</code>(<code class="variable">int</code> i = <code class="number">0</code>; i < numberOfPictures-<code class="number">1</code>; i++){
         <code class="comment">// rotate stepper</code>
         myStepper.<code class="method">step</code>(stepLength);
         <code class="comment">// send take message</code>
