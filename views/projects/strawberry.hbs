@@ -4,7 +4,9 @@
 </div>
 
 <h1>Summary</h1>
-<p>The strawberry imaging robot is used to take pictures of strawberries for use in training a neural network. The robot consists of a stepper motor, an arduino, a bluetooth module, and an iPhone. The stepper motor turns the strawberries while the iPhone takes pictures of the strawberries automatically.</p>
+<p>The strawberry imaging robot is used to take pictures of strawberries for use in training a neural network. The
+    robot consists of a stepper motor, an arduino, a bluetooth module, and an iPhone. The stepper motor turns the
+    strawberries while the iPhone takes pictures of the strawberries automatically.</p>
 
 <div class="icon-align-center align-bottom">
     <i class="fab fa-bluetooth-b fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Bluetooth LE"></i>
@@ -53,7 +55,10 @@
 </table>
 
 <h3>Arduino</h3>
-<p>The arduino in this project is the interface between the bluetooth module and the stepper motor. The code on the arduino waits for the “start” signal from the bluetooth module to begin. Then the arduino rotates the stepper motor one quarter turn. After the rotation is completed the arduino sends a “take” message back to the bluetooth module. The arduino then waits for a delay time and repeats the process.</p>
+<p>The arduino in this project is the interface between the bluetooth module and the stepper motor. The code on the
+    arduino waits for the “start” signal from the bluetooth module to begin. Then the arduino rotates the stepper motor
+    one quarter turn. After the rotation is completed, the arduino sends a “take” message back to the bluetooth module.
+    The arduino then waits for a delay time and repeats the process.</p>
 
 <div class="row">
     <div class="col-sm-12 col-md-6">
@@ -91,7 +96,10 @@
 </code></pre>
 
 <h3>iPhone</h3>
-<p>The iPhone in this project is used to take pictures and start the rotation routine on the arduino. The application running on the phone is written in Swift and uses Core Bluetooth and AVFoundation. Core Bluetooth is used to communicate with the bluetooth module connected to the arduino. When the bluetooth module sends a “take” command, the application uses AVFoundation to take a picture and save it to the iPhone’s photos.</p>
+<p>The iPhone in this project is used to take pictures and start the rotation routine on the arduino. The application
+    running on the phone is written in Swift and uses Core Bluetooth and AVFoundation. Core Bluetooth is used to
+    communicate with the bluetooth module connected to the arduino. When the bluetooth module sends a “take” command,
+    the application uses AVFoundation to take a picture and save it to the iPhone’s photos.</p>
 
 <br>
 <div class="row">
