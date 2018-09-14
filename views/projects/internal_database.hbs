@@ -1,0 +1,118 @@
+<div class="col-lg">
+    <h1 class="display-4 myHeading">{{title}}</h1>
+    <hr>
+</div>
+
+
+<h1>Summary</h1>
+<p>
+    At appareo the test team often needs to keep track of versions folders and files over time. The database tool
+    allows a user to choose an internal project folder and submit a zipped file and complimentary data to the database.
+</p>
+
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <figure class="figure icon-align-center">
+            <img src="/images/internal_database/internal_database_tool_card_image.PNG" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+
+<br><br>
+<h1>Details</h1>
+<hr>
+
+<h3>Project Requirements</h3>
+<table class="table table-sm">
+    <tbody>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Zip files and folders</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Submit zip files to networked drive</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Gather user data</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Allow users to select project</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Populate other fields based on project</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Submit data to database</th>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<h3>Windows Desktop</h3>
+<p>The client program was written in Visual Studio 2017 using the windows WPF frameworks and C#. The programs job is to
+    get the folder/file a user clicks on (using the Windows “Send to” option), zip it, gather some user data, and send
+    it to the database.
+</p>
+
+<div class="icon-align-center align-bottom">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/visual_studio_icon.png" data-toggle="tooltip"
+        data-placement="top" title="Visual Studio 2017">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/c-sharp-icon.png" data-toggle="tooltip" data-placement="top"
+        title="C#">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/mahapps_icon.png" data-toggle="tooltip" data-placement="top"
+        title="Mahapps">
+</div>
+
+<br><br><br>
+<p>To gather user data the Model-View-ViewModel pattern was used to bind data from the user interface to the underlying
+    code. The data is then wrapped in a class and sent to the mySQL database using a custom REST service. However, the
+    transfer of the zip file wasn't quite as simple. </p>
+
+<br>
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <figure class="figure icon-align-center">
+            <img src="/images/internal_database/internal_database_tool_window_image.PNG" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+
+<br>
+<h3>Windows Server</h3>
+<p>Because of the way networked drives and folder permissions work in windows I wasn't able to simply transfer the
+    files to the proper folder over the network. To get around this issue I set up a different folder and wrote a
+    windows service that runs on Appareo’s server. The service checks the folder that the program has permission to and
+    then moves zip files to the proper, protected folder.</p>
+
+<div class="icon-align-center align-baseline">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/mysql_icon.png" data-toggle="tooltip" data-placement="top"
+        title="mySQL">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/windows_server_icon.png" data-toggle="tooltip"
+        data-placement="top" title="Windows Server 2012">
+</div>
+
+<br><br><br>
+<div class="row">
+    <div class="col-sm-6">
+        <figure class="figure">
+            <img src="/images/internal_database/internal_database_tool_collapsed_image.PNG" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Collapsed view for certain projects</figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-6">
+
+        <figure class="figure icon-align-center">
+            <img src="/images/internal_database/internal_database_tool_sendto_image.PNG" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Windows Send to context menu</figcaption>
+        </figure>
+    </div>
+</div>

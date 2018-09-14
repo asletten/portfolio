@@ -28,10 +28,19 @@ router.get('/projects/lab_monitor', function(req, res, next) {
   res.render('projects/lab_monitor', { title: 'Lab Monitor Website'});
 });
 
-//Lab monitor
+//Stawberry
 router.get('/projects/strawberry_robot', function(req, res, next) {
   res.render('projects/strawberry', { title: 'Strawberry Imaging Robot'});
 });
 
+//Internal Database
+router.get('/projects/internal_database', function(req, res, next) {
+  res.render('projects/internal_database', { title: 'Internal Database Tool'});
+});
+
+//quadcopter_positioning
+router.get('/projects/quadcopter_positioning', function(req, res, next) {
+  res.render('projects/quadcopter_positioning', { title: 'Quadcopter Positioning'});
+});
 
 module.exports = router;

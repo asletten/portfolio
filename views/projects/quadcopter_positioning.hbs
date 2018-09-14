@@ -1,0 +1,169 @@
+<div class="col-lg">
+    <h1 class="display-4 myHeading">{{title}}</h1>
+    <hr>
+</div>
+
+
+<h1>Summary</h1>
+<p>The quadcopter positioning robot was a project for my Robotics/AI class at NDSU. The goal of the project was to
+    create a system that could use an array of ultrasonic sensors and an IMU to figure out its relative position in
+    space.</p>
+
+
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <figure class="figure icon-align-center">
+            <img src="/images/quadcopter/Diagrams/point_cloud.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+
+<br><br>
+<h1>Details</h1>
+<hr>
+
+<h3>Project Requirements</h3>
+<table class="table table-sm">
+    <tbody>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Calculate relative position in space</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Use low cost sensors</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Use low cost computing devices</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:orange"></i> </th>
+            <th>Complete in one semester</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:red"></i> </th>
+            <th>Navigate using relative position</th>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<h3>Distance</h3>
+<p>Ultrasonic sensors were used for getting a rough idea about how far away an object was from the system. However,
+    ultrasonic sensors pose a few issues for our purposes. The main issue was the existence of only a single point for
+    each sensor instead of a point cloud (which are used for most other autonomous systems). The ability to only
+    collect one point for each ultrasonic sensor gave the system a limited amount of spatial data so assumptions had to
+    be made about the environment.</p>
+
+<p>Another issue with ultrasonic sensors are corners and odd angles. If an ultrasonic sensor is pointed at a corner the
+    sound wave will bounce off the walls and give inaccurate readings. Also, if an ultrasonic sensor is pointed at an
+    edge the sound wave will bounce off in different directions and not return to the sensor.</p>
+
+<br>
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <figure class="figure icon-align-center">
+            <img src="/images/quadcopter/Diagrams/ultrasonic_problems.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+
+<br>
+<h3>Position</h3>
+<p>Positioning was achieved by using the ultrasonic sensor array in combination with an IMU. The IMU could produce
+    gyroscopic and acceleration data. With a gyroscope the roll, pitch, and yaw could be calculated. With the
+    acceleration data the position could be calculated using the double integral of the acceleration data.</p>
+
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <figure class="figure">
+            <img src="/images/quadcopter/Math/double_itegral.png" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption text-center">Intergrals of acceleration</figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+
+<br>
+<p>However, the
+    acceleration data from the IMU tended to be inaccurate. To correct for inaccuracy the distances from the ultrasonic
+    sensors were used to anchor the systems position.</p>
+
+<br>
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <figure class="figure icon-align-center">
+            <img src="/images/quadcopter/Diagrams/anchor.png" class="figure-img img-fluid rounded">
+            <figcaption class="figure-caption">Ultrasonic anchor</figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+
+<br>
+<h3>Control system</h3>
+<p>The control system used onboard the quadcopter was an Arduino UNO. The arduino gathered data from the IMU and
+    ultrasonic sensor array and transmitted it via a Bluetooth 2.0 module. The signal was then received by my laptop
+    running a visualization program written in Unity 3D.
+</p>
+
+<div class="icon-align-center align-baseline">
+    <i class="fab fa-bluetooth-b fa-2x myIcon" data-toggle="tooltip" data-placement="top" title="Bluetooth LE"></i>
+    <img class="myIcon myIcon-img" src="/images/technology_icons/arduino_icon.png" data-toggle="tooltip" data-placement="top"
+        title="Arduino">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/unity_icon.png" data-toggle="tooltip" data-placement="top"
+        title="C">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/c-sharp-icon.png" data-toggle="tooltip" data-placement="top"
+        title="C#">
+    <img class="myIcon myIcon-img" src="/images/technology_icons/c_icon.png" data-toggle="tooltip" data-placement="top"
+        title="C">
+</div>
+
+<br><br><br>
+<div class="row">
+    <div class="col-sm-6">
+        <figure class="figure">
+            <img src="/images/quadcopter/Unity/interface.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6">
+
+        <figure class="figure icon-align-center">
+            <img src="/images/quadcopter/Unity/quadcopter_move.gif" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+</div>
+
+
+<br>
+<h3>Construction</h3>
+<p>Almost all of the parts for the system were salvaged together from other projects and kits. The quadcopter frame was
+    3D printed over the course of 2 weeks with ABS plastic. After the parts were printed they were fastened together
+    using M4 bolts and nuts from an arduino car kit. The arduino, arduino shield, ultrasonic sensors, and jumper wires
+    were also salvaged from multiple car kits. The motors, propellers and speed controllers were bought in a kit from
+    amazon along with an IMU. Lastly the battery and power distribution board were borrowed from a classmate.</p>
+
+<br><br><br>
+<div class="row">
+    <div class="col-sm-6">
+        <figure class="figure">
+            <img src="/images/quadcopter/quadcopter_floor.jpg" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6">
+
+        <figure class="figure icon-align-center">
+            <img src="/images/quadcopter/arduino.jpg" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+</div>
+
+<br>
+<h3>Gallary</h3>
