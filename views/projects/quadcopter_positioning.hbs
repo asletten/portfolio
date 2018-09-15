@@ -5,9 +5,10 @@
 
 
 <h1>Summary</h1>
-<p>The quadcopter positioning robot was a project for my Robotics/AI class at NDSU. The goal of the project was to
-    create a system that could use an array of ultrasonic sensors and an IMU to figure out its relative position in
-    space.</p>
+<p>For my Robotics/AI class at North Dakota State University, I created a quadcopter positioning system. The goal of
+    the project was to create a system that could use an array of ultrasonic sensors and an IMU to figure out its
+    relative position in space.
+</p>
 
 
 <div class="row">
@@ -33,19 +34,15 @@
         </tr>
         <tr>
             <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
-            <th>Use low cost sensors</th>
+            <th>Use low cost sensors and computing devices</th>
         </tr>
         <tr>
             <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
-            <th>Use low cost computing devices</th>
+            <th>Navigate using relative position</th>
         </tr>
         <tr>
             <th><i class="fas fa-check-square" style="color:orange"></i> </th>
             <th>Complete in one semester</th>
-        </tr>
-        <tr>
-            <th><i class="fas fa-check-square" style="color:red"></i> </th>
-            <th>Navigate using relative position</th>
         </tr>
     </tbody>
 </table>
@@ -53,14 +50,14 @@
 <br>
 <h3>Distance</h3>
 <p>Ultrasonic sensors were used for getting a rough idea about how far away an object was from the system. However,
-    ultrasonic sensors pose a few issues for our purposes. The main issue was the existence of only a single point for
+    ultrasonic sensors posed a few issues for our purposes. The main issue was the existence of only a single point for
     each sensor instead of a point cloud (which are used for most other autonomous systems). The ability to only
-    collect one point for each ultrasonic sensor gave the system a limited amount of spatial data so assumptions had to
-    be made about the environment.</p>
+    collect one point for each ultrasonic sensor gave the system a limited amount of spatial data, so assumptions had
+    to be made about the environment.</p>
 
-<p>Another issue with ultrasonic sensors are corners and odd angles. If an ultrasonic sensor is pointed at a corner the
-    sound wave will bounce off the walls and give inaccurate readings. Also, if an ultrasonic sensor is pointed at an
-    edge the sound wave will bounce off in different directions and not return to the sensor.</p>
+<p>Another issue for the ultrasonic sensors were corners and odd angles. If an ultrasonic sensor is pointed at a
+    corner, the sound wave will bounce off the walls and give inaccurate readings. Also, if an ultrasonic sensor is
+    pointed at an edge, the sound wave will bounce off in different directions and not return to the sensor.</p>
 
 <br>
 <div class="row">
@@ -76,8 +73,8 @@
 <br>
 <h3>Position</h3>
 <p>Positioning was achieved by using the ultrasonic sensor array in combination with an IMU. The IMU could produce
-    gyroscopic and acceleration data. With a gyroscope the roll, pitch, and yaw could be calculated. With the
-    acceleration data the position could be calculated using the double integral of the acceleration data.</p>
+    gyroscopic and acceleration data. With a gyroscope, the roll, pitch, and yaw could be calculated. With the
+    acceleration data, the position could be calculated using the double integral of the acceleration data.</p>
 
 <div class="row">
     <div class="col-sm-2"></div>
@@ -91,9 +88,8 @@
 </div>
 
 <br>
-<p>However, the
-    acceleration data from the IMU tended to be inaccurate. To correct for inaccuracy the distances from the ultrasonic
-    sensors were used to anchor the systems position.</p>
+<p>However, the acceleration data from the IMU tended to be inaccurate. To correct for the inaccuracy, the distances
+    from the ultrasonic sensors were used to anchor the system’s position.</p>
 
 <br>
 <div class="row">
@@ -145,10 +141,11 @@
 <br>
 <h3>Construction</h3>
 <p>Almost all of the parts for the system were salvaged together from other projects and kits. The quadcopter frame was
-    3D printed over the course of 2 weeks with ABS plastic. After the parts were printed they were fastened together
+    3D printed over the course of two weeks with ABS plastic. After the parts were printed, they were fastened together
     using M4 bolts and nuts from an arduino car kit. The arduino, arduino shield, ultrasonic sensors, and jumper wires
-    were also salvaged from multiple car kits. The motors, propellers and speed controllers were bought in a kit from
-    amazon along with an IMU. Lastly the battery and power distribution board were borrowed from a classmate.</p>
+    were also salvaged from multiple car kits. The motors, propellers, and speed controllers were purchased in a kit
+    from Hobbymate, and an IMU was purchased from Knacro. Lastly, the battery and power distribution board were
+    borrowed from a classmate.</p>
 
 <br><br><br>
 <div class="row">

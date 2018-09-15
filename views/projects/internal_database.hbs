@@ -71,9 +71,9 @@
 </div>
 
 <br><br><br>
-<p>To gather user data the Model-View-ViewModel pattern was used to bind data from the user interface to the underlying
-    code. The data is then wrapped in a class and sent to the mySQL database using a custom REST service. However, the
-    transfer of the zip file wasn't quite as simple. </p>
+<p>To gather user data, the Model-View-ViewModel pattern was used to bind data from the user interface to the
+    underlying code. The data was then wrapped in a class and sent to the mySQL database using a custom REST service.
+    However, the transfer of the zip file wasn't quite as simple.</p>
 
 <br>
 <div class="row">
@@ -88,9 +88,9 @@
 
 <br>
 <h3>Windows Server</h3>
-<p>Because of the way networked drives and folder permissions work in windows I wasn't able to simply transfer the
-    files to the proper folder over the network. To get around this issue I set up a different folder and wrote a
-    windows service that runs on Appareo’s server. The service checks the folder that the program has permission to and
+<p>Because of the way networked drives and folder permissions work in Windows, I wasn't able to simply transfer the
+    files to the proper folder over the network. To get around this issue, I set up a different folder and wrote a
+    Windows service that runs on Appareo’s server. The service checks the folder that the program has permission to and
     then moves zip files to the proper, protected folder.</p>
 
 <div class="icon-align-center align-baseline">
