@@ -43,4 +43,9 @@ router.get('/projects/quadcopter_positioning', function(req, res, next) {
   res.render('projects/quadcopter_positioning', { title: 'Quadcopter Positioning'});
 });
 
+//centroid_calculator
+router.get('/projects/centroid_calculator', function(req, res, next) {
+  res.render('projects/centroid_calculator', { title: 'Centroid Calculator'});
+});
+
 module.exports = router;
