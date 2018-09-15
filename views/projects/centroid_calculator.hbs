@@ -4,12 +4,27 @@
 </div>
 
 <h1>Summary</h1>
-<p>The Centroid Calculator application was built for my Calculus II course at NDSU. The objective was to calculate the centroid of all 48 continental states and then calculate the centroid of the continental US. I solved this problem using KML files from Google Earth and a custom Java program.</p>
+<p>The Centroid Calculator application was built for my Calculus II course at NDSU. The objective was to calculate the
+    centroid of all 48 continental states and then calculate the centroid of the continental US. I solved this problem
+    using KML files from Google Earth and a custom Java program.</p>
 
 <p class="text-muted pl-5 pr-5">
-<span class="font-weight-bold">Definition:</span> “In mathematics and physics, the centroid or geometric center of a plane figure is the arithmetic mean position of all the points in the figure. Informally, it is the point at which a cutout of the shape could be perfectly balanced on the tip of a pin.” <span class="font-italic">-Wikipedia</span>
+    <span class="font-weight-bold">Definition:</span> “In mathematics and physics, the centroid or geometric center of
+    a plane figure is the arithmetic mean position of all the points in the figure. Informally, it is the point at
+    which a cutout of the shape could be perfectly balanced on the tip of a pin.” <span class="font-italic">-Wikipedia</span>
 </p>
 
+<div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+        <figure class="figure">
+            <img src="/images/centroid_calculator/centroid.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-4">
+    </div>
+</div>
 
 <br><br>
 <h1>Details</h1>
@@ -31,26 +46,31 @@
 
 <br>
 <h3>Google Earth</h3>
-<p>In Google Earth, one can use their mouse to draw out paths to then be exported as KML files. So, to get the data for all 48 continental states, I wrote my group mates instructions on how to draw out these paths and create the files. After I compiled the files from my groups members, I used the Java program to parse out all the data.
+<p>In Google Earth, one can use their mouse to draw out paths to then be exported as KML files. So, to get the data for
+    all 48 continental states, I wrote my group mates instructions on how to draw out these paths and create the files.
+    After I compiled the files from my groups members, I used the Java program to parse out all the data.
 </p>
 
 <div class="row">
     <div class="col-sm-6">
-        <figure class="figure">
+        <figure class="figure h-100">
             <img src="/images/centroid_calculator/nevada_top.png" class="figure-img img-fluid rounded">
         </figure>
     </div>
-    <div class="col-sm-6">
-
+    <div class="col-sm-6 h-100">
         <figure class="figure">
-            <img src="/images/centroid_calculator/nevada_top.png" class="figure-img img-fluid rounded">
+            <img src="/images/centroid_calculator/path_draw.gif" class="figure-img img-fluid rounded">
         </figure>
     </div>
 </div>
 
 <br>
 <h3>Java</h3>
-<p>The Java application required four different files for each side of the state. The paths to these files were entered into a text field, and then the corresponding button to indicate which side of the state was being entered was pressed. When the corresponding buttons were pressed, the file was parsed, and the raw coordinates were displayed. Once all four files were in the program, the calculate button was pressed. When the calculate button is pressed, the necessary algorithms are run and the output is displayed.</p>
+<p>The Java application required four different files for each side of the state. The paths to these files were entered
+    into a text field, and then the corresponding button to indicate which side of the state was being entered was
+    pressed. When the corresponding buttons were pressed, the file was parsed, and the raw coordinates were displayed.
+    Once all four files were in the program, the calculate button was pressed. When the calculate button is pressed,
+    the necessary algorithms are run and the output is displayed.</p>
 
 <div class="row">
     <div class="col-sm-6">
@@ -69,16 +89,20 @@
 <br>
 <h3>Math</h3>
 
-<p>The algorithms that are run in the Java program use Simpson's rule to perform numerical integration on the data points. However, the data points don't perfectly line up with each other, and a path may have more data points than the corresponding path.</p>
+<p>The algorithms that are run in the Java program use Simpson's rule to perform numerical integration on the data
+    points. However, the data points don't perfectly line up with each other, and a path may have more data points than
+    the corresponding path.</p>
 
 <p class="text-muted pl-5 pr-5">
-<span class="font-weight-bold">Definition:</span> “Simpson's rule is a method for numerical integration, the numerical approximation of definite integrals.” <span class="font-italic">-Wikipedia</span>
+    <span class="font-weight-bold">Definition:</span> “Simpson's rule is a method for numerical integration, the
+    numerical approximation of definite integrals.” <span class="font-italic">-Wikipedia</span>
 </p>
 
-<p>The algorithm accounts for the point alignment problem by using the closest corresponding point on the x axis to approximate the point directly in line. </p>
+<p>The algorithm accounts for the point alignment problem by using the closest corresponding point on the x axis to
+    approximate the point directly in line. </p>
 
 <div class="row">
-        <div class="col-sm-6">
+    <div class="col-sm-6">
         <figure class="figure">
             <img src="/images/centroid_calculator/corresponding_point.png" class="figure-img img-fluid rounded">
         </figure>
