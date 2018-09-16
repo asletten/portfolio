@@ -48,4 +48,14 @@ router.get('/projects/centroid_calculator', function(req, res, next) {
   res.render('projects/centroid_calculator', { title: 'Centroid Calculator'});
 });
 
+//endangered_map
+router.get('/projects/endangered_map', function(req, res, next) {
+  res.render('projects/endangered_map', { title: 'Endangered Species Map'});
+});
+
+//car_controller
+router.get('/projects/car_controller', function(req, res, next) {
+  res.render('projects/car_controller', { title: 'Computer Controlled RC Car'});
+});
+
 module.exports = router;

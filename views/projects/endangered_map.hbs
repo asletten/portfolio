@@ -1,0 +1,103 @@
+<div class="col-lg">
+    <h1 class="display-4 myHeading">{{title}}</h1>
+    <hr>
+</div>
+
+<h1>Summary</h1>
+<p>For my Environmental Sustainability course project at NDSU, I wrote a Python script that created a KML file from
+    endangered species data. The KML opens in Google Earth or Google Maps and contains coordinates, pictures, links,
+    and other information about endangered species around the world.
+</p>
+
+<br><br>
+<h1>Details</h1>
+<hr>
+
+<h3>Project Requirements</h3>
+<table class="table table-sm">
+    <tbody>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Use a GIS system to create a demonstration</th>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<h3>Python</h3>
+<p>To get the data I needed, I referenced WorldWildLife.org (WWF). WWF has a list of endangered species with
+    comprehensive data about each animal. I parsed the data and generated a KML using some build in XML Python
+    libraries. Images of the animals were then processed to make icons. The icons were color coded red for critically
+    endangered, orange for endangered, and yellow for vulnerable.</p>
+
+<div class="row">
+    <div class="col-sm-4">
+        <figure class="figure h-100">
+            <img src="/images/endangered_species/African Elephant.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-4">
+        <figure class="figure">
+            <img src="/images/endangered_species/Bengal Tiger.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-4">
+        <figure class="figure">
+            <img src="/images/endangered_species/Eastern Lowland Gorilla.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+</div>
+
+<br>
+<h3>Google Earth</h3>
+<p>Google Earth, along with Google Maps, have the ability to open KML files. KML stands for Keyhole Markup Language
+    after “Keyhole Inc,” a company developing an early version of Google Earth that was then bought by Google. KML is
+    an XML based format which can contain a variety of GIS information. </p>
+
+<p>For my project, I took advantage of the “Placemark” element which can contain icons, coordinates, titles,
+    descriptions, and even HTML. The Placemark was populated with an icon of the endangered animal and an HTML
+    formatted pane for the information about the animal.</p>
+
+<div class="row">
+    <div class="col-sm-6">
+        <figure class="figure h-100">
+            <img src="/images/endangered_species/html_example.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6">
+        <figure class="figure">
+            <img src="/images/endangered_species/close_example.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+</div>
+
+<p>I also created a temperature map using custom icons, NOAA weather data, and color interpolation using the same
+    methods as described above.</p>
+
+<div class="row">
+    <div class="col-sm-4">
+
+        <figure class="figure">
+            <img src="/images/endangered_species/temp_map.png" class="figure-img img-fluid rounded">
+        </figure>
+
+    </div>
+    <div class="col-sm-4">
+        <figure class="figure">
+            <img src="/images/endangered_species/califonia_temp_map.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-4">
+        <figure class="figure">
+            <img src="/images/endangered_species/alaska_temp_map.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+</div>
+
+<br>
+<h3>Endangered Species</h3>
+<p>To find out more about endangered species visit World Wildlife’s species <a href="https://www.worldwildlife.org/species">page</a></p>
+
+<p>To find out how you can help visit World Wildlife’s gift <a href="https://gifts.worldwildlife.org/gift-center/">page</a></p>
+
+<br><br>
