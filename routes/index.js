@@ -63,4 +63,19 @@ router.get('/projects/geology_game', function(req, res, next) {
   res.render('projects/geology_game', { title: 'Geology Game'});
 });
 
+//tank_game
+router.get('/projects/tank_game', function(req, res, next) {
+  res.render('projects/tank_game', { title: 'Tank Game'});
+});
+
+//parachutez
+router.get('/projects/parachutez', function(req, res, next) {
+  res.render('projects/parachutez', { title: 'Parachutez'});
+});
+
+//frankenstein_pc
+router.get('/projects/frankenstein_pc', function(req, res, next) {
+  res.render('projects/frankenstein_pc', { title: 'Frankenstein PC'});
+});
+
 module.exports = router;
