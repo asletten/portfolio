@@ -58,4 +58,9 @@ router.get('/projects/car_controller', function(req, res, next) {
   res.render('projects/car_controller', { title: 'Computer Controlled RC Car'});
 });
 
+//geology_game
+router.get('/projects/geology_game', function(req, res, next) {
+  res.render('projects/geology_game', { title: 'Geology Game'});
+});
+
 module.exports = router;
