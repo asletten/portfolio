@@ -10,6 +10,11 @@ router.get('/resume', function(req, res, next) {
   res.render('resume', { title: 'Resume'});
 });
 
+router.get('/resumepdf', function(req, res){
+  var file = __dirname + '/upload/Resume.pdf';
+  res.download(file); // Set disposition and send it.
+});
+
 router.get('/interests', function(req, res, next) {
   res.render('interests', { title: 'Interests'});
 });
