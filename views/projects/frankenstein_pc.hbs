@@ -4,3 +4,95 @@
 </div>
 
 <h1>Summary</h1>
+<p>The “Frankenstein” computer was a project stretching over several months in an attempt to create a gaming PC for my roommate. The PC consisted of two power supplies and an array of hacked together parts.</p>
+
+<div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+        <figure class="figure">
+            <img src="/images/frankenstein_pc/side_by_side.JPG" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>
+
+<br><br>
+<h1>Details</h1>
+<hr>
+
+<h3>Motherboard and Case</h3>
+<p>The motherboard for the PC came out of a Dell Optiplex desktop bought for $40 at an NDSU surplus sale. The board had an Intel i7 processor with 8 gigabytes of RAM. The case that I used for this project was stolen from an old mid 2000s COMPAQ desktop. The motherboard and case screw holes all matched up because of the standardized ATX motherboard size, but an issue arose when installing the CPU heatsink. </p>
+
+<p>On the Optiplex desktop case, there were mounting holes for the CPU coolers’ bolts to screw into. However, these mounting holes were nonexistent in the COMPAQ case. I solved this problem by taking a trip to the hardware store where I bought four nuts to attach on the back of the motherboard. This approach wasn't ideal and probably put unnecessary strain on the motherboard, but it functioned as intended.
+</p>
+
+<h3>Graphics Card and Power Supply(s)</h3>
+<p>At this time, I had recently bought a new graphics card for my main desktop, so I had a leftover GTX 670. This card is rated for 250 watts, so I obviously couldn't use the COMPAQ’s 125 watt power supply. However, I tried anyway. To make this work, I had to cut off some of the old power connectors of the COMPAQ power supply and solder on connectors I salvaged from some leftover cables from my main desktop’s modular power supply. However, with the graphics card installed, the main motherboard connector couldn't reach its socket. To solve this problem, I used wires salvaged from the Dell Optiplex’s power supply to extend each one of the connectors 24 pins for a total of 48 solder connections.</p>
+
+<div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+        <figure class="figure">
+            <img src="/images/frankenstein_pc/solder.jpg" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>
+
+<p>After everything was soldered and connected properly, I turned the computer on and it worked! Everything seemed to be going well until I tried opening up some games. As soon as the graphics card’s fan started to spin up, the power supply’s automatic overcurrent protection circuit activated and shut everything down.</p>
+
+<p>To tackle this issue, I searched how to disable overcurrent protection on power supplies, and, it turns out, usually you only have to cut a trace to one IC pin. After cutting the trace, I tried again, but the power supply wouldn't turn on. After I used a jumper wire and some solder to fix the power supply, I took a break for a month.</p>
+
+<p>After my break, I had the idea to use two power supplies: one for the motherboard and one for the graphics card. When I went home one weekend, I stole a 250 watt power supply from another one of my old computers. When I got back to NDSU, I cut off the old connectors and soldered on graphics card connectors.</p>
+
+<div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+        <figure class="figure">
+            <img src="/images/frankenstein_pc/connector.jpg" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>
+
+<p>After plugging in both power supplies, I jumped the green “PS-on” wire to ground on the dedicated graphics card’s power supply to turn it on. Then, I turned on the computer. Everything seemed to be working properly, so I fired up a game. The game actually loaded up and was playable for a couple minutes, but, inevitably, one of the power supplies crashed and caused the system to fail.</p>
+
+<p>For my last and final attempt, I decided to co-power the graphics card with both the power supplies to theoretically balance the load. The current load balancing worked, and the PC could run most games at medium to high settings at 60fps.</p>
+
+<p>However, the PC was very ugly and not very portable because of the extra power supply hanging out of the side. Also, two power cables had to be plugged into the wall. So, I took the PC home for a weekend and went to work on connecting the power supplies. First, I found an old extension cable and cut out a section to connect the supplies together. Next, I drilled holes in the supplies to route the cable through. The power cable was then soldered internally to each main 120VAC line.</p>
+
+<div class="row">
+    <div class="col-sm-6">
+        <figure class="figure h-100">
+            <img src="/images/frankenstein_pc/power_supply_one.jpg" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6">
+        <figure class="figure">
+            <img src="/images/frankenstein_pc/power_supply_two.jpg" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+</div>
+
+<p>After I had power, I mounted the second power supply in the case where the extra hard drive bays used to be. Finally, I spliced both green “PS-on” wires together so that both power supplies would turn on simultaneously when the power button was pressed.
+</p>
+
+<div class="row">
+    <div class="col-sm-6">
+        <figure class="figure h-100">
+            <img src="/images/frankenstein_pc/finished_1.jpg" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6">
+        <figure class="figure">
+            <img src="/images/frankenstein_pc/finished_2.jpg" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+</div>
+<br><br>
