@@ -1,0 +1,89 @@
+<div class="col-lg">
+    <h1 class="display-4 myHeading">{{title}}</h1>
+    <hr>
+</div>
+
+<h1>Summary</h1>
+<p>This project was for my Database course at NDSU. The instructions for the project were to use a mySQL database with
+    five or more tables to create an interactive website. My group and I built a ping pong tournament scheduler website
+    for our project.
+</p>
+
+<br><br>
+<div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+        <figure class="figure">
+            <img src="/images/php_database/database_card_image.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>
+
+<br><br>
+<h1>Details</h1>
+<hr>
+
+<h3>Project Requirements</h3>
+<table class="table table-sm">
+    <tbody>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Use mySQL</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Use five or more tables</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Use PHP for the back-end implementation</th>
+        </tr>
+        <tr>
+            <th><i class="fas fa-check-square" style="color:limegreen"></i> </th>
+            <th>Protect against SQL injection</th>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<h3>SQL</h3>
+<p>The database schema was designed using Visio. The SQL <kbd>INSERT</kbd> commands were then generated using a custom Java program. I used our class list for the tournament participants and the NDSU faculty for the coaches. These lists were parsed from the NDSU website.</p>
+
+<br>
+<div class="row">
+    <div class="col-sm-6">
+        <figure class="figure h-100">
+            <img src="/images/php_database/sql.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6">
+        <figure class="figure">
+            <img src="/images/php_database/figure.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+</div>
+
+<br>
+<h3>Back-end</h3>
+<p>The back-end was programmed using embedded PHP. The code protects against SQL injection before sending SQL queries to the mySQL database. When the data returns, the PHP code uses the data to generate HTML tables and buttons for navigation. 
+</p>
+
+<div class="row">
+    <div class="col-sm-6">
+        <figure class="figure h-100">
+            <img src="/images/php_database/php.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+    <div class="col-sm-6">
+        <figure class="figure">
+            <img src="/images/php_database/coach_details.png" class="figure-img img-fluid rounded">
+        </figure>
+    </div>
+</div>
+
+<br>
+<h3>Front-end</h3>
+<p>The front-end of the website is plain HTML stylized with CSS3. The page has some base HTML, but most of it is generated after PHP database requests.</p>

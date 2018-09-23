@@ -83,4 +83,9 @@ router.get('/projects/frankenstein_pc', function(req, res, next) {
   res.render('projects/frankenstein_pc', { title: 'Frankenstein PC'});
 });
 
+//frankenstein_pc
+router.get('/projects/php_database', function(req, res, next) {
+  res.render('projects/php_database', { title: 'PHP Database Website'});
+});
+
 module.exports = router;
