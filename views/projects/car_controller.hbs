@@ -1,73 +1,85 @@
-<div class="col-lg">
-    <h1 class="display-4 myHeading">{{title}}</h1>
+<div class="container">
+
+    <div class="col-lg">
+        <h1 class="display-4 myHeading">{{title}}</h1>
+        <hr>
+    </div>
+
+    <h1>Summary</h1>
+    <p>In this project, I modified the controller of a cheap RC car that my brother bought me for Christmas.</p>
+
+    <br><br>
+    <h1>Details</h1>
     <hr>
-</div>
 
-<h1>Summary</h1>
-<p>In this project, I modified the controller of a cheap RC car that my brother bought me for Christmas.</p>
+    <h3>Electronics</h3>
+    <p>The controls on the car controller were just simple switches as opposed to more expensive potentiometers, making
+        the
+        electronics side of the project extremely simple. I just soldered the wires from each switch to an Arduino
+        digital
+        IO pin and ground, allowing me to program the Arduino to switch the digital pins from high to low to move the
+        car.</p>
 
-<br><br>
-<h1>Details</h1>
-<hr>
-
-<h3>Electronics</h3>
-<p>The controls on the car controller were just simple switches as opposed to more expensive potentiometers, making the
-    electronics side of the project extremely simple. I just soldered the wires from each switch to an Arduino digital
-    IO pin and ground, allowing me to program the Arduino to switch the digital pins from high to low to move the car.</p>
-
-<div class="row">
-    <div class="col-sm-6">
-        <figure class="figure">
-            <img src="/images/computer_car/car_switches.jpg" class="figure-img img-fluid rounded">
-        </figure>
+    <div class="row">
+        <div class="col-sm-6">
+            <figure class="figure">
+                <img src="/images/computer_car/car_switches.jpg" class="figure-img img-fluid rounded">
+            </figure>
+        </div>
+        <div class="col-sm-6">
+            <figure class="figure">
+                <img src="/images/computer_car/wiring.png" class="figure-img img-fluid rounded">
+            </figure>
+        </div>
     </div>
-    <div class="col-sm-6">
-                <figure class="figure">
-            <img src="/images/computer_car/wiring.png" class="figure-img img-fluid rounded">
-        </figure>
+
+    <h3>Construction</h3>
+    <p>To fit an Arduino into the car controller, it had to be small. I used an Arduino Nano to meet the size
+        requirements.
+        However, the Arduino Nano was still a little too big, so the battery case had to be ground down a little for a
+        snug
+        fit. Since the batteries had to be removed for this project, I decided to power the controller and Arduino
+        using a
+        broken Lightning cable. I cut the damaged Lightning connector off and soldered the +5 volts and ground to the
+        Arduino. </p>
+
+    <p> After I had power working, I routed the switch control wires through a hole in the battery compartment and
+        soldered them to the Arduino. After the code was tested and everything worked properly, the Arduino was secured
+        in
+        place with hot glue.</p>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <figure class="figure">
+                <img src="/images/computer_car/port.jpg" class="figure-img img-fluid rounded">
+            </figure>
+        </div>
+        <div class="col-sm-6">
+            <figure class="figure">
+                <img src="/images/computer_car/close_arduino.jpg" class="figure-img img-fluid rounded">
+            </figure>
+        </div>
     </div>
-</div>
-
-<h3>Construction</h3>
-<p>To fit an Arduino into the car controller, it had to be small. I used an Arduino Nano to meet the size requirements.
-    However, the Arduino Nano was still a little too big, so the battery case had to be ground down a little for a snug
-    fit. Since the batteries had to be removed for this project, I decided to power the controller and Arduino using a
-    broken Lightning cable. I cut the damaged Lightning connector off and soldered the +5 volts and ground to the
-    Arduino. </p>
-
-<p> After I had power working, I routed the switch control wires through a hole in the battery compartment and
-    soldered them to the Arduino. After the code was tested and everything worked properly, the Arduino was secured in
-    place with hot glue.</p>
-
-<div class="row">
-    <div class="col-sm-6">
-        <figure class="figure">
-            <img src="/images/computer_car/port.jpg" class="figure-img img-fluid rounded">
-        </figure>
-    </div>
-    <div class="col-sm-6">
-                <figure class="figure">
-            <img src="/images/computer_car/close_arduino.jpg" class="figure-img img-fluid rounded">
-        </figure>
-    </div>
-</div>
 
 
-<h3>Unity</h3>
-<p>The unity program borrowed some code from my quadcopter project to communicate with the Arduino imbedded in the
-    controller. The program connected to the car controller and provided virtual joysticks or arrow keys to control the
-    car. This setup also allowed for custom routines to be run just by clicking the corresponding button in the user
-    interface.
-</p>
+    <h3>Unity</h3>
+    <p>The unity program borrowed some code from my quadcopter project to communicate with the Arduino imbedded in the
+        controller. The program connected to the car controller and provided virtual joysticks or arrow keys to control
+        the
+        car. This setup also allowed for custom routines to be run just by clicking the corresponding button in the
+        user
+        interface.
+    </p>
 
-<div class="row">
-    <div class="col-sm-4">
-    </div>
-    <div class="col-sm-4">
-        <figure class="figure">
-            <img src="/images/computer_car/car_control.gif" class="figure-img img-fluid rounded">
-        </figure>
-    </div>
-    <div class="col-sm-4">
+    <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+            <figure class="figure">
+                <img src="/images/computer_car/car_control.gif" class="figure-img img-fluid rounded">
+            </figure>
+        </div>
+        <div class="col-sm-4">
+        </div>
     </div>
 </div>
