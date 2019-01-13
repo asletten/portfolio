@@ -11,7 +11,7 @@ router.get('/resume', function(req, res, next) {
 });
 
 router.get('/resumepdf', function(req, res){
-  var file = __dirname + '/upload/Aaron Sletten\'s Resume 2018.pdf';
+  var file = __dirname + '/upload/Aaron Sletten\'s Resume 2019.pdf';
   res.download(file); // Set disposition and send it.
 });
 
